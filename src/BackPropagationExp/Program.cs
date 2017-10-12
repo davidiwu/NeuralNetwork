@@ -12,7 +12,7 @@ namespace BackPropagationExp
         {
             TrainNeuronNetworkAsXORFunction();
 
-            //TrainNeuronNetworkAsXANDFunction();
+            TrainNeuronNetworkAsXANDFunction();
         }
 
         private static void TrainNeuronNetworkAsXORFunction()
@@ -44,7 +44,7 @@ namespace BackPropagationExp
                 {1, 1}
             };
 
-            // xand function: 0 xor 0 = 1;  0 xor 1 = 1; 1 xor 0 = 1; 1 xor 1 = 0;
+            // xand function: 0 xand 0 = 1;  0 xand 1 = 1; 1 xand 0 = 1; 1 xand 1 = 0;
             var resutls = new double[] { 1, 1, 1, 0 };
             xandNetwork.InitializeNetwork(inputs, resutls);
 
