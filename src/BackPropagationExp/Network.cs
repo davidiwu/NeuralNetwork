@@ -21,7 +21,11 @@ namespace BackPropagationExp
 
         public Layer OutputLayer { get; set; }
 
-
+        /// <summary>
+        /// define a neuro network
+        /// </summary>
+        /// <param name="epochCount">epoch count</param>
+        /// <param name="hiddenLayerNeuronCount"> the neuron count of the hidden layer</param>
         public Network(int epochCount, int hiddenLayerNeuronCount)
         {
             _epoch = epochCount;
@@ -55,7 +59,7 @@ namespace BackPropagationExp
 
                     PrintResult(inputs, OutputLayer.GetOutputs());
 
-                    OutputLayer.AdjustErrorsBasedOnExpectResult(new double[] {Resutls[j]});
+                    OutputLayer.AdjustErrorsBasedOnExpectResult(new[] {Resutls[j]});
                     OutputLayer.AdjustNeuronWeights();
 
                     HiddenLayer.AdjustErrors(OutputLayer.Neurons[0]);

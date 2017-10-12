@@ -10,12 +10,14 @@ namespace BackPropagationExp
     {
         static void Main(string[] args)
         {
-            UsingMyNeuronNetwork();
+            TrainNeuronNetworkAsXORFunction();
+
+            //TrainNeuronNetworkAsXANDFunction();
         }
 
-        private static void UsingMyNeuronNetwork()
+        private static void TrainNeuronNetworkAsXORFunction()
         {
-            Network nw = new Network(2000, 2);
+            Network xorNetwork = new Network(2000, 2);
             var inputs = new double[,]
             {
                 {0, 0},
@@ -24,10 +26,29 @@ namespace BackPropagationExp
                 {1, 1}
             };
 
-            var resutls = new double[] { 1, 1, 1, 0 };
-            nw.InitializeNetwork(inputs, resutls);
+            // xor function: 0 xor 0 = 0;  0 xor 1 = 1; 1 xor 0 = 1; 1 xor 1 = 0;
+            var resutls = new double[] { 0, 1, 1, 0 };
+            xorNetwork.InitializeNetwork(inputs, resutls);
 
-            nw.TrainNetwork();
+            xorNetwork.TrainNetwork();
+        }
+
+        private static void TrainNeuronNetworkAsXANDFunction()
+        {
+            Network xandNetwork = new Network(2000, 2);
+            var inputs = new double[,]
+            {
+                {0, 0},
+                {0, 1},
+                {1, 0},
+                {1, 1}
+            };
+
+            // xand function: 0 xor 0 = 1;  0 xor 1 = 1; 1 xor 0 = 1; 1 xor 1 = 0;
+            var resutls = new double[] { 1, 1, 1, 0 };
+            xandNetwork.InitializeNetwork(inputs, resutls);
+
+            xandNetwork.TrainNetwork();
         }
 
     }

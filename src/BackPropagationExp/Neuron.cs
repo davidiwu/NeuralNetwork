@@ -9,14 +9,11 @@ namespace BackPropagationExp
     public class Neuron
     {
         private readonly int _inputCount;
+        private double _biasWeight;
 
         public double[] Inputs { get; set; }
-
         public double[] Weights { get; set; }
-
         public double Error { get; set; }
-
-        private double _biasWeight;
 
         public Neuron(int count)
         {
