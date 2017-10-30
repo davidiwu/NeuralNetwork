@@ -1,12 +1,12 @@
-# NeuroNetwork
+# Neural Network
 
-	1. using c# to demonstrate the back-propagation method for neuron network training
+	1. using c# to demonstrate the back-propagation method for neural network training
 	2. for activation function, here uses sigmoid function. 
 	3. below shows the difference between sigmoid neuron and perceptron.
 
 # Train the network
 
-	demostrate how to train the network to act as an XOR / XAND function:
+	demostrate how to train the neural network to act as an XOR / XAND function:
 
 	xor function:
   		0 xor 0 = 0;  0 xor 1 = 1; 1 xor 0 = 1; 1 xor 1 = 0;
