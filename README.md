@@ -24,7 +24,7 @@
 # sigmoid neuron inputs:
 
 	it also has inputs like x1,x2,… But instead of being just 0 or 1, 
-	these inputs can also take on any values between 1 and 1. 
+	these inputs can also take on any values between 0 and 1. 
 	So, for instance, 0.638…is a valid input for a sigmoid neuron.	
 	 
 	sigmoid neuron has weights for each input, w1,w2,… and an overall bias, b.
