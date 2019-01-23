@@ -17,7 +17,7 @@ namespace BackPropagationExp
 
         private static void TrainNeuronNetworkAsXORFunction()
         {
-            Network xorNetwork = new Network(2000, 2);
+            Network xorNetwork = new Network(2000, 20);
             var inputs = new double[,]
             {
                 {0, 0},

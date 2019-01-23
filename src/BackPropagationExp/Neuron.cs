@@ -40,10 +40,10 @@ namespace BackPropagationExp
 
         public void AdjustWeights()
         {
-            _biasWeight += Error;
+            _biasWeight -= Error;
             for (int i = 0; i < _inputCount; i++)
             {
-                Weights[i] += Error*Inputs[i];
+                Weights[i] -= Error*Inputs[i];
             }
         }
 

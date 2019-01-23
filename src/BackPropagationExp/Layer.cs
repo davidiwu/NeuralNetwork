@@ -77,7 +77,7 @@ namespace BackPropagationExp
             {
                 var output = Neurons[i].Output();
 
-                var globalError = Sigmoid.Derivative(output) * (result[i] - output);
+                var globalError = Sigmoid.Derivative(output) * (output - result[i]);
                 Neurons[i].Error = globalError;
             }
         }
